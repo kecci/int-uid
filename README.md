@@ -1,4 +1,4 @@
-# Unique ID Integer
+int-uid
 
 ```bash
 ➜  unique-id-integer go run main.go

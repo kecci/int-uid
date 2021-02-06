@@ -10,6 +10,8 @@
 
 Experimental project to generate integer unique identifier.
 
+Docs: https://pkg.go.dev/github.com/kecci/int-uid
+
 ## Installation
 ```sh
 $ go get github.com/kecci/int-uid
@@ -57,3 +59,5 @@ BenchmarkUnixNanoReverse-8   	1000000000	         0.000007 ns/op	       0 B/op	 
 PASS
 coverage: 100.0% of statements
 ```
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkecci%2Fint-uid.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkecci%2Fint-uid?ref=badge_large)

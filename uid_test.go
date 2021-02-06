@@ -22,7 +22,7 @@ func TestUnixNano(t *testing.T) {
 				ch <- uid.UnixNano()
 			}()
 			u1 = <-ch
-			assert.NotEqualValues(t, &u1, &u2)
+			assert.True(t, &u1 != &u2)
 			u2 = u1
 		}
 	})
@@ -43,7 +43,7 @@ func TestUnixNanoReverse(t *testing.T) {
 				ch <- uid.UnixNanoReverse()
 			}()
 			u1 = <-ch
-			assert.NotEqualValues(t, &u1, &u2)
+			assert.True(t, &u1 != &u2)
 			u2 = u1
 		}
 	})

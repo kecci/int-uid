@@ -5,9 +5,9 @@ Experimental project to generate integer unique identifier.
 ## Unix Nano
 
 
-| Length | Go Data Type | SQL Data Type | 
-| ------ | ------------ | ------------- |
-| 19 Character | int64 | BigInt |
+| Bit | Length | Go Data Type | SQL Data Type | 
+| --- | ------ | ------------ | ------------- |
+| 64 bit | 19 Character | int64 | BigInt |
 
 Run:
 ```sh
@@ -21,9 +21,9 @@ Output :
 
 ##  Unix Nano (Reverse)
 
-| Length | Go Data Type | SQL Data Type | 
-| ------ | ------------ | ------------- |
-| 16 Character | int64 | BigInt |
+| Bit | Length | Go Data Type | SQL Data Type | 
+| --- | ------ | ------------ | ------------- |
+| 64 bit | 16 Character | int64 | BigInt |
 
 Run:
 ```sh

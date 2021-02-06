@@ -3,9 +3,10 @@
 ![GitHub issues](https://img.shields.io/github/issues/kecci/int-uid)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kecci/int-uid)
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](http://golang.org)
-![GitHub followers](https://img.shields.io/github/followers/kecci?style=social)
-![GitHub Repo stars](https://img.shields.io/github/stars/kecci/int-uid?style=social)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkecci%2Fint-uid.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkecci%2Fint-uid?ref=badge_shield)
+[![CircleCI](https://circleci.com/gh/kecci/int-uid.svg?style=svg)](https://circleci.com/gh/kecci/int-uid)
+
+
 
 # int-uid
 

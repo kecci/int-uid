@@ -6,12 +6,14 @@ import (
 	"time"
 )
 
+// UnixNano generate unixnano
 func UnixNano() int64 {
 	return time.Now().UnixNano()
 }
 
+// UnixNanoReverse generate reverse of unixnano
 func UnixNanoReverse() int64 {
-	id, _ := strconv.Atoi(reverse(fmt.Sprintf("%d", time.Now().UnixNano())))
+	id, _ := strconv.Atoi(reverse(fmt.Sprintf("%d", UnixNano())))
 	return int64(id)
 }
 

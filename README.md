@@ -49,3 +49,11 @@ There are several functions to get int-uid.
 | ---- | --- | ------ | ------------ | ------------- |
 | UnixNano() | 64 bit | 19 Character | int64 | BigInt |
 | UnixNanoReverse() | 64 bit | 16 Character | int64 | BigInt |
+
+## Benchmark
+```sh
+BenchmarkUnixNano-8          	1000000000	         0.000001 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnixNanoReverse-8   	1000000000	         0.000007 ns/op	       0 B/op	       0 allocs/op
+PASS
+coverage: 100.0% of statements
+```

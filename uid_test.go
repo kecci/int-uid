@@ -22,7 +22,7 @@ func TestUnixNano(t *testing.T) {
 				ch <- uid.UnixNano()
 			}()
 			u1 = <-ch
-			assert.NotEqual(t, &u1, &u2)
+			assert.NotEqualValues(t, &u1, &u2)
 			u2 = u1
 		}
 	})

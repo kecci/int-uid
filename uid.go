@@ -3,11 +3,15 @@ package uid
 import (
 	"fmt"
 	"strconv"
+	"sync"
 	"time"
 )
 
 // UnixNano generate unixnano
 func UnixNano() int64 {
+	mu := sync.Mutex{}
+	mu.Lock()
+	defer mu.Unlock()
 	return time.Now().UnixNano()
 }
 

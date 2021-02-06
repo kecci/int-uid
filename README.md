@@ -7,7 +7,7 @@
 [![CircleCI](https://circleci.com/gh/kecci/int-uid.svg?style=svg)](https://circleci.com/gh/kecci/int-uid)
 # int-uid
 <p align="center">
-<img src="int-uid.png" alt="Kitten"
+<img src="asset/int-uid.png" alt="Kitten"
 	title="A cute kitten" width="200" height="200" />
 </p>
 

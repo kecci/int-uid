@@ -17,7 +17,7 @@ func TestUnixNano(t *testing.T) {
 		ch := make(chan int64)
 		var u1 int64
 		var u2 int64
-		for i := 0; i <= 1000000; i++ {
+		for i := 0; i <= 1000; i++ {
 			go func() {
 				ch <- uid.UnixNano()
 			}()
@@ -38,7 +38,7 @@ func TestUnixNanoReverse(t *testing.T) {
 		ch := make(chan int64)
 		var u1 int64
 		var u2 int64
-		for i := 0; i <= 1000000; i++ {
+		for i := 0; i <= 1000; i++ {
 			go func() {
 				ch <- uid.UnixNanoReverse()
 			}()

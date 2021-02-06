@@ -5,10 +5,11 @@
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](http://golang.org)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkecci%2Fint-uid.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkecci%2Fint-uid?ref=badge_shield)
 [![CircleCI](https://circleci.com/gh/kecci/int-uid.svg?style=svg)](https://circleci.com/gh/kecci/int-uid)
-
-
-
 # int-uid
+<p align="center">
+<img src="int-uid.png" alt="Kitten"
+	title="A cute kitten" width="200" height="200" />
+</p>
 
 Experimental project to generate integer unique identifier.
 
@@ -56,8 +57,8 @@ There are several functions to get int-uid.
 
 ## Benchmark
 ```sh
-BenchmarkUnixNano-8          	1000000000	         0.000001 ns/op	       0 B/op	       0 allocs/op
-BenchmarkUnixNanoReverse-8   	1000000000	         0.000007 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUnixNano-8          1000000000	  0.000002 ns/op	0 B/op	  0 allocs/op
+BenchmarkUnixNanoReverse-8   1000000000	  0.000007 ns/op	0 B/op	  0 allocs/op
 PASS
 coverage: 100.0% of statements
 ```

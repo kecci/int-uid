@@ -1,4 +1,4 @@
-package main
+package uid
 
 import (
 	"fmt"
@@ -6,9 +6,13 @@ import (
 	"time"
 )
 
-func main() {
+func UnixNano() int64 {
+	return time.Now().UnixNano()
+}
+
+func UnixNanoReverse() int64 {
 	id, _ := strconv.Atoi(reverse(fmt.Sprintf("%d", time.Now().UnixNano())))
-	fmt.Print(id)
+	return int64(id)
 }
 
 func reverse(s string) string {

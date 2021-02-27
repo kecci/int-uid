@@ -57,10 +57,16 @@ There are several functions to get int-uid.
 
 ## Benchmark
 ```sh
-BenchmarkUnixNano-8          1000000000	  0.000002 ns/op	0 B/op	  0 allocs/op
-BenchmarkUnixNanoReverse-8   1000000000	  0.000007 ns/op	0 B/op	  0 allocs/op
+goos: darwin
+goarch: amd64
+pkg: github.com/kecci/int-uid
+BenchmarkUnixNano/UnixNano()-8                 1000000000     0.000002 ns/op      0 B/op      0 allocs/op
+BenchmarkUnixNano/UnixNano().Reverse()-8       1000000000     0.000006 ns/op      0 B/op      0 allocs/op
+BenchmarkSnowflake/Snowflake()-8               1000000000     0.000002 ns/op      0 B/op      0 allocs/op
+BenchmarkSnowflake/Snowflake().Reverse()-8     1000000000     0.000002 ns/op      0 B/op      0 allocs/op
 PASS
 coverage: 100.0% of statements
+ok      github.com/kecci/int-uid        0.287s
 ```
 
 ## License

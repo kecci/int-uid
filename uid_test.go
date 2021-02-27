@@ -2,6 +2,7 @@ package uid_test
 
 import (
 	"testing"
+	"time"
 
 	uid "github.com/kecci/int-uid"
 	"github.com/stretchr/testify/assert"
@@ -90,6 +91,46 @@ func TestSnowflake(t *testing.T) {
 	})
 }
 
+func TestSonyflake(t *testing.T) {
+	t.Run("Not nil", func(t *testing.T) {
+		u := uid.New().Sonyflake(time.Time{}).Int64()
+		assert.NotNil(t, u)
+	})
+
+	t.Run("Identical Checker", func(t *testing.T) {
+		ch := make(chan int64)
+		var u1 int64
+		var u2 int64
+		for i := 0; i <= 1000; i++ {
+			go func() {
+				ch <- uid.New().Sonyflake(time.Time{}).Int64()
+			}()
+			u1 = <-ch
+			assert.True(t, &u1 != &u2)
+			u2 = u1
+		}
+	})
+
+	t.Run("Reverse Not nil", func(t *testing.T) {
+		u := uid.New().Sonyflake(time.Time{}).Reverse().Int64()
+		assert.NotNil(t, u)
+	})
+
+	t.Run("Reverse Identical Checker", func(t *testing.T) {
+		ch := make(chan int64)
+		var u1 int64
+		var u2 int64
+		for i := 0; i <= 1000; i++ {
+			go func() {
+				ch <- uid.New().Sonyflake(time.Time{}).Int64()
+			}()
+			u1 = <-ch
+			assert.True(t, &u1 != &u2)
+			u2 = u1
+		}
+	})
+}
+
 /*
 Benchmark Test
 */
@@ -113,6 +154,18 @@ func BenchmarkSnowflake(b *testing.B) {
 
 	b.Run("Snowflake().Reverse()", func(b *testing.B) {
 		u := uid.New().Snowflake().Int64()
+		assert.NotNil(b, u)
+	})
+}
+
+func BenchmarkSonyflake(b *testing.B) {
+	b.Run("Sonyflake()", func(b *testing.B) {
+		u := uid.New().Sonyflake(time.Time{}).Int64()
+		assert.NotNil(b, u)
+	})
+
+	b.Run("Sonyflake().Reverse()", func(b *testing.B) {
+		u := uid.New().Sonyflake(time.Time{}).Int64()
 		assert.NotNil(b, u)
 	})
 }

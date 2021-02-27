@@ -56,10 +56,12 @@ output :
 There are several functions to get int-uid.
 
 
-| Func | Bit | Length | Go Data Type | SQL Data Type | 
-| ---- | --- | ------ | ------------ | ------------- |
-| UnixNano() | 64 bit | 19 Character | int64 | BigInt |
-| UnixNanoReverse() | 64 bit | 16 Character | int64 | BigInt |
+| Func | Bit | Length | Go Data Type | SQL Data Type | Example |
+| ---- | --- | ------ | ------------ | ------------- | ------- |
+| UnixNano() | 64 bit | 19 Character | int64 | BigInt | 1614432967521585000 |
+| UnixNano().Reverse() | 64 bit | 16 Character | int64 | BigInt | 1261257692344161 |
+| Snowflake() | 64 bit | 19 Character | int64 | BigInt | 1365656963861450752 |
+| Snowflake().Reverse() | 64 bit | 19 Character | int64 | BigInt | 2570541683696565631 |
 
 ## Benchmark
 ```sh

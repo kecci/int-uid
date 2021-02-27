@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/bwmarrin/snowflake"
+	"github.com/sony/sonyflake"
 )
 
 // UID basic info
@@ -35,6 +36,15 @@ func (u *UID) Snowflake() ID {
 	defer u.mu.Unlock()
 	node, _ := snowflake.NewNode(1)
 	return ID(node.Generate().Int64())
+}
+
+func (u *UID) Sonyflake(startTime time.Time) ID {
+	u.mu.Lock()
+	defer u.mu.Unlock()
+	id, _ := sonyflake.NewSonyflake(sonyflake.Settings{
+		StartTime: startTime,
+	}).NextID()
+	return ID(id)
 }
 
 // Reverse ID

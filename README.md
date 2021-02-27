@@ -22,21 +22,25 @@ $ go get github.com/kecci/int-uid
 
 ## Usage
 
-main.go:
+examples main.go:
 
 ```go
 package main
 
 import (
-    "github.com/kecci/int-uid"
+	"fmt"
+
+	uid "github.com/kecci/int-uid"
 )
 
 func main() {
-    u := uid.UnixNano()
-    ur := uid.UnixNanoReverse()
+	// Unix Nano
+	fmt.Println(uid.New().UnixNano().Int64())
+	fmt.Println(uid.New().UnixNano().Reverse().Int64())
 
-    fmt.Println(u)
-    fmt.Println(ur)
+	// Snowflake
+	fmt.Println(uid.New().Snowflake().Int64())
+	fmt.Println(uid.New().Snowflake().Reverse().Int64())
 }
 ```
 

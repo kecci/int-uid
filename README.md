@@ -11,7 +11,7 @@
 	title="int-uid" width="200" height="200" />
 </p>
 
-Experimental project to generate integer unique identifier.
+Production ready to Generate integer unique identifier in Golang.
 
 Docs: https://pkg.go.dev/github.com/kecci/int-uid
 

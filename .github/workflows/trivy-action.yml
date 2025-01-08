@@ -1,0 +1,21 @@
+name: GitHub Actions
+run-name: ${{ github.actor }} is running GitHub Actions 🚀
+on: 
+  pull_request:
+    branches:
+    - master
+jobs:
+  Trivy-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Aqua Security Trivy
+        uses: aquasecurity/trivy-action@0.29.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'table'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
